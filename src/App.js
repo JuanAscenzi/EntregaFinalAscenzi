@@ -1,7 +1,7 @@
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { Main } from "./Main";
+import { Footer } from "./Footer";
 
 export function App() {
   return (
