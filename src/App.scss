@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+section{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-with: 500px){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-with: 900px){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  @media (min-with: 11000px){
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
