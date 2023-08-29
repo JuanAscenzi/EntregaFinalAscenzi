@@ -5,7 +5,7 @@ import { Presentacional } from "./Presentacional"
 
 export function Container() {
   
-  const [ data,setData ] = useState([])
+  const [ data, setData ] = useState([])
   const resultado = useParams()
   
   

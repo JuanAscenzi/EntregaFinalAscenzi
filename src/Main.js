@@ -28,7 +28,6 @@ export function Main() {
           <Route path="/*" element={<h1>404 ERROR NOT FOUND</h1>}/>
           <Route path="/carrito" element={<p>Carrito</p>} />
         </Routes>
-        
     </main>
   )
  }

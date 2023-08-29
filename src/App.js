@@ -9,10 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Header/>
-      <Main/>
-      <Footer/>
       <ItemListContainer greeting={'Bienvenidos a Beerload'} />
+      <Main/>
       <ItemDetailContainer/>
+      <Footer/>
     </BrowserRouter>
 
 );

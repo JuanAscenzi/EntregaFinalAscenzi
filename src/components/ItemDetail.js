@@ -1,4 +1,6 @@
-export const ItemDetail = ({name, category, img, description}) => {
+import ItemCount from "./ItemCount"
+
+export const ItemDetail = ({name, category, quantity, stock, img, description}) => {
     return(
         <article className="CardItem">
             <header className="Header">
@@ -18,7 +20,7 @@ export const ItemDetail = ({name, category, img, description}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-                {/* <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada");}/> */}
+                <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada")}/>
             </footer>
         </article>
     )
