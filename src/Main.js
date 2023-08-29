@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Form } from './components/Form'
-import { Container } from './Container'
+import { Routes, Route } from 'react-router-dom'
+import { ItemDetailContainer } from './components/ItemDetailContainer'
+import { ItemListContainer } from './components/ItemListContainer'
 
 export function Main() {
-
+ 
     const [show,setShow] = useState(false)
 
     const toogleMenu = () => {
@@ -13,6 +14,9 @@ export function Main() {
     return (
       <main className='p-2 grow'> 
         <button onClick={toogleMenu} className='border p-1 roudned'>Toogle menu</button>
+
+        <button onClick={toogleMenu} className='border p-1 roudned'>Abrir catálogo</button>
+
       </main>
 
     )
@@ -20,16 +24,15 @@ export function Main() {
   return (
     <main className='p-2 grow'> 
         <button onClick={toogleMenu} className='border p-1 roudned'>Toogle menu</button>
-        <hr />
-        <Form/>
-        <Container/>
-        <hr />
-        <p>Estado: {`${show}`}</p>
-        <ul>
-            <li>Home</li>
-            <li>Productos</li>
-            <li>Contacto</li> 
-        </ul> 
+
+        <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/category/:categoryId" element={<ItemListContainer />}/>
+          <Route path="/item/:itemId" element={<ItemDetailContainer />}/>
+          <Route path="/*" element={<h1>404 ERROR NOT FOUND</h1>}/>
+          <Route path="/carrito" element={<p>Carrito</p>} />
+        </Routes>
+
     </main>
   )
  }

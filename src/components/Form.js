@@ -3,7 +3,6 @@ import { useRef } from 'react'
 
 export function Form() {
 
-
 const nombreRef = useRef(null)
 const apellidoRef = useRef(null)
 

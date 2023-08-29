@@ -1,11 +1,9 @@
 import React from 'react'
-import { NavBar } from './components/NavBar/NavBar'
 
 export function Footer() {
   return (
-    <footer>
+    <footer className='text-center bg-slate-600 text-white'>
         <p>&copy; Copyright</p>
-        <NavBar/>
     </footer>
   )
 }

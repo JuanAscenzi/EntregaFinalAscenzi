@@ -1,11 +1,13 @@
-import React from 'react'
-import { NavBar } from './components/NavBar/NavBar'
+import { NavBar } from './NavBar'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   return (
-    <header id="header" className="header">
+    <header id="header" className="header flex justify-between py-4 px-2 bg-slate-800">
+        <Link to="/">
+         <h1>  BeerLoad </h1> 
+        </Link>
         <NavBar/>
-        <h1>Mi pagina</h1>
     </header>
 
   )
