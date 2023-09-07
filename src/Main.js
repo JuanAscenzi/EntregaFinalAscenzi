@@ -13,8 +13,6 @@ export function Main() {
   if (show) {
     return (
       <main className='p-2 grow'> 
-        <button onClick={toogleMenu} className='border p-1 roudned'>Toogle menu</button>
-
         <button onClick={toogleMenu} className='border p-1 roudned'>Abrir catálogo</button>
 
       </main>
