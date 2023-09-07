@@ -1,8 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { ItemDetailContainer } from "./components/ItemDetailContainer";
-import { ItemListContainer } from "./components/ItemListContainer";
+import { Main } from './Main'
 import { MiCustomProvider } from "./components/MiContexto";
 
 export function App() {
@@ -11,8 +10,7 @@ export function App() {
     <BrowserRouter>
       <MiCustomProvider>
         <Header/>
-        <ItemListContainer greeting={'Bienvenidos a Beerload'} />
-        <ItemDetailContainer/>
+        <Main/>
         <Footer/>
       </MiCustomProvider>
     </BrowserRouter>
