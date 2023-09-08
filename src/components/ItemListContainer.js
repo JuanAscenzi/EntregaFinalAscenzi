@@ -5,6 +5,7 @@ import { ItemList } from "./ItemList"
 
 export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
+    const [ loading, setLoading ] = useState(true)
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -17,12 +18,14 @@ export const ItemListContainer = ({greeting}) => {
             .catch(error => {
                 console.error(error)             
             })
+            .finally(()=> setLoading(false))
     },[categoryId])
 
     return (
         <div>
             <h1>{greeting}</h1>
-            <ItemList products={products}/>
+            { loading ? <h2>Cargando</h2> : <ItemList products={products}/> }
+            
         </div>
     )
 }

@@ -18,6 +18,9 @@ export const ItemDetail = ({name, category, quantity, stock, img, description}) 
                 <p className="Info">
                     Descripcion: {description}
                 </p>
+                <p className="Info">
+                    Stock actualizado: {stock}
+                </p>
             </section>
             <footer className="ItemFooter">
                 <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada")}/>

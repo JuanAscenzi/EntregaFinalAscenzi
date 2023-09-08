@@ -16,9 +16,6 @@ export const Item = ({id,name,img,price,stock}) => {
                 <p className="Info">
                     Precio: ${price}
                 </p>
-                <p className="Info">
-                    Stock actualizado: {stock}
-                </p>
             </section>
             <footer className="ItemFooter">
                 <Link to={`/item/${id}`} className="Option"> Ver detalles </Link>

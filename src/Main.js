@@ -21,7 +21,7 @@ export function Main() {
   } else {
   return (
     <main className='p-2 grow'> 
-        <button onClick={toogleMenu} className='border p-1 roudned'>Toogle menu</button>
+        <button onClick={toogleMenu} className='border p-1 roudned'>Cerrar catálogo</button>
 
         <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
