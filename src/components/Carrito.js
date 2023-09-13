@@ -1,19 +1,22 @@
-import React from 'react'
-import CarritoHijo from './CarritoHijo'
+import { useState } from 'react'
+import { CarritoHijo } from './CarritoHijo'
 
-function Carrito() {
+export function Carrito() {
   
-  const miCallback = () => {
-    console.log("Mi CallBack");
+  const [selectedCant, setselectedCant] = useState(0)
+  const onAdd = (cantidad) => {
+    console.log("Mi callback onAdd")
   }
 
   return (
     <div>
-      
-      <CarritoHijo miCallback={miCallback}/> 
+      <p>Cantidad seleccionada desde Carrito: {selectedCant}
+
+      <CarritoHijo 
+        onAdd={onAdd}
+      /> 
+      </p>Lista carrito actual 
     </div>
     
   )
 }
-
-export default Carrito

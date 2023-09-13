@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 import { ItemListContainer } from './components/ItemListContainer'
+import { Carrito } from "./components/Carrito"
 
 export function Main() {
  
@@ -12,7 +13,7 @@ export function Main() {
     }
   if (show) {
     return (
-      <main className='p-2 grow'> 
+      <main className='p-2 grow items-centers'> 
         <button onClick={toogleMenu} className='border p-1 roudned'>Abrir catálogo</button>
 
       </main>
@@ -28,7 +29,7 @@ export function Main() {
           <Route path="/category/:categoryId" element={<ItemListContainer />}/>
           <Route path="/item/:itemId" element={<ItemDetailContainer />}/>
           <Route path="/*" element={<h1>404 ERROR NOT FOUND</h1>}/>
-          <Route path="/carrito" element={<p>Carrito</p>} />
+          <Route path="/carrito" element={<Carrito/>}/>
         </Routes>
 
     </main>

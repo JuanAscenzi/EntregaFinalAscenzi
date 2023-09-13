@@ -12,7 +12,9 @@ export function NavBar() {
     
       <div className='Categories'>
         <NavLink to={`/category/rubia`} className={({ isActive }) => isActive ? 'ActiveOption' : Option}>Cervezas Rubias</NavLink>
+        <hr />
         <NavLink to={`/category/negra`} className={({ isActive }) => isActive ? 'ActiveOption' : Option}>Cervezas Negra</NavLink>
+        <hr />
         <NavLink to={`/category/roja`} className={({ isActive }) => isActive ? 'ActiveOption' : Option}>Cervezas Rojas</NavLink>
         <CartWidget/> 
       </div>
