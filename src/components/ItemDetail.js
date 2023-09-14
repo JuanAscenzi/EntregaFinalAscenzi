@@ -1,6 +1,20 @@
+import { useContext, useState } from "react"
+import { CartContext } from "../context/CartContext"
 import ItemCount from "./ItemCount"
 
 export const ItemDetail = ({name, category, quantity, stock, img, description}) => {
+    // const [quantityAdded, setQuantityAdded] = useState(0)
+    // const { addItem } = useContext(CartContext)
+
+    // const handelOnAdd = (quantity) =>{
+    //     setQuantityAdded(quantity)
+
+    //     const item = {
+    //         name, price
+    //     }
+    //     addItem(item, quantity)
+    // }
+
     return(
         <article className="CardItem">
             <header className="Header">
@@ -26,5 +40,5 @@ export const ItemDetail = ({name, category, quantity, stock, img, description}) 
                 <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada")}/>
             </footer>
         </article>
-    )
+    ) 
 }

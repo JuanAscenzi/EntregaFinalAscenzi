@@ -6,18 +6,21 @@ import { MiCustomProvider } from "./components/MiContexto";
 import "./db/migrations"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import { Toaster, toast } from 'sonner';
+import { Toaster } from 'sonner';
+import { CartProvider } from "./context/CartContext";
 
 export function App() {
   return (
 
     <BrowserRouter>
-      <MiCustomProvider>
-        <Header/>
-        <Toaster position="top right" />
-        <Main/>
-        <Footer/>
-      </MiCustomProvider>
+      {/* <CartProvider> */}
+        <MiCustomProvider>
+          <Header/>
+          <Toaster position="top right" />
+          <Main/>
+          <Footer/>
+        </MiCustomProvider>
+      {/* </CartProvider> */}
     </BrowserRouter>
 
 );
