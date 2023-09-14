@@ -1,9 +1,7 @@
-import { useState } from "react"
-
 const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState('')
-    const [phone, setphone] = useState('')
-    const [email, setemail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
 
     const handleConfirm = (event) => {
         event.preventDefault()
@@ -29,3 +27,4 @@ const CheckoutForm = ({ onConfirm }) => {
         </div>
     )
 }
+export default CheckoutForm
