@@ -2,26 +2,25 @@ import { BrowserRouter } from "react-router-dom";
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { Main } from './Main'
+import { Toaster } from 'sonner';
 import { MiCustomProvider } from "./components/MiContexto";
-import "./db/migrations"
+import { CartProvider } from "./context/CartContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import { Toaster } from 'sonner';
-import { CartProvider } from "./context/CartContext";
+import "./db/migrations"
 
 export function App() {
   return (
-
-    <BrowserRouter>
-      {/* <CartProvider> */}
-        <MiCustomProvider>
-          <Header/>
-          <Toaster position="top right" />
-          <Main/>
-          <Footer/>
-        </MiCustomProvider>
-      {/* </CartProvider> */}
-    </BrowserRouter>
+  <CartProvider>
+      <BrowserRouter>
+            <MiCustomProvider>
+            <Header/>
+            <Toaster position="top right" />
+            <Main/>
+            <Footer/>
+          </MiCustomProvider>
+      </BrowserRouter>
+  </CartProvider>
 
 );
 } 

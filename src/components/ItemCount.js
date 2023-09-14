@@ -1,22 +1,33 @@
-import React, { useState, useContext} from "react";
-import { contexto } from "./MiContexto";
-function ItemCount() {
-    let [contador, setContador] = useState(0)
-    useContext(contexto )
+// import React, { useState, useContext} from "react";
+// import { contexto } from "./MiContexto";
+import React, { useState } from "react";
+import { Button } from 'react-bootstrap'
 
-    const sumar = () => setContador(contador + 1)
+export const ItemCount = ({stock, onAdd, initial}) => {
+    let [contador, setContador] = useState(initial)
+    
+    const sumar = () => {
+        if(contador < stock){
+            setContador(contador + 1)
+        }
+    }
 
-    const restar = () => setContador(contador - 1) 
+    const restar = () => {
+        if(contador > 0){
+            setContador(contador - 1)
+        }
+    }
 
     const resetear = () => setContador(0)
- return (
-     <main className="p-2 grow">
-            <p>En el carrito: {contador} </p>
-            <button className="border p-1 rounded" variant="primery"  onClick={sumar}>+</button>
-            <button className="border p-1 rounded" variant="primery"  onClick={restar}>-</button>
-            <button className="border p-1 rounded" variant="primery"  onClick={resetear}>Reseteo</button>
-        </main>
-    )
-}
 
-export default ItemCount;
+ return (
+    <div className="d-flex flex-column align-items-center justify-content-between">
+        <div>
+            <Button variant='dark' onClick={restar}>-</Button>
+            <span className="btn">{contador}</span>
+            <Button variant='dark' onClick={sumar}>+</Button>
+            <Button variant='dark' onClick={resetear}>Reseteo</Button>
+        </div>
+        <Button variant='dark' disabled={contador === 0} onClick={()=>onAdd(contador)}>Comprar</Button>
+    </div>
+ )}

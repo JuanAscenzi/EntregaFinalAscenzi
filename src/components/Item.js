@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export const Item = ({id,name,img,price,stock}) => {
 
     return(
-        <article className="CardItem">
+        <article className="CardItem d-flex flex-column align-items-center">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}

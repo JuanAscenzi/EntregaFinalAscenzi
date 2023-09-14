@@ -10,7 +10,7 @@ export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
     const [data, setData] = useState([])
     const [error, setError] = useState("")
-    const [ loading, setLoading ] = useState(true)
+    const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -51,7 +51,7 @@ export const ItemListContainer = ({greeting}) => {
     },[categoryId])
 
     return (
-        <div>
+        <div className="d-flex flex-column align-items-center">
             <h1>{greeting}</h1>
             <ItemList products={products}/>
             
