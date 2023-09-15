@@ -23,7 +23,7 @@ export const CartProvider = ({children}) =>{
         setCart([])
     }
     
-    const isInCart = () => {
+    const isInCart = (id) => {
         return cart.some((item)=> item.id === id)
     }
 
@@ -34,4 +34,5 @@ export const CartProvider = ({children}) =>{
         <CartContext.Provider value={{ cart, addItem, clear, isInCart, deleteItem}}>
             { children }
         </CartContext.Provider>
-        )}
+    )
+}

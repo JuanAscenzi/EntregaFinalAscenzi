@@ -3,7 +3,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import { Main } from './Main'
 import { Toaster } from 'sonner';
-import { MiCustomProvider } from "./components/MiContexto";
+import { CartContext } from "./context/CartContext";
 import { CartProvider } from "./context/CartContext";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -13,16 +13,16 @@ export function App() {
   return (
   <CartProvider>
       <BrowserRouter>
-            <MiCustomProvider>
+            <CartContext>
             <Header/>
             <Toaster position="top right" />
             <Main/>
             <Footer/>
-          </MiCustomProvider>
+          </CartContext>
       </BrowserRouter>
   </CartProvider>
 
-);
+  );
 } 
 
 export default App;

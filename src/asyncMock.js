@@ -57,3 +57,4 @@ export const getProductsByCategory = (productCategory) => {
         }, 500)
     })
 }
+
