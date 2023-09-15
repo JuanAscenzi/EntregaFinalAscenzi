@@ -9,6 +9,7 @@ import { ItemDetail } from './ItemDetail'
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
     const { itemId } = useParams() 
+    
 
     useEffect(() => {
         // const productosCollection = collection(db, "productos")
@@ -22,7 +23,7 @@ export const ItemDetailContainer = () => {
                 console.error(error);
             })
     },[itemId])
-   
+      
     return(
         <div className='ItemDetailContainer'>
             <ItemDetail {...product} />
