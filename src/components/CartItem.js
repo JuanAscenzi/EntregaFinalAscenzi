@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const CartItem = ({ product, deleteItem }) => {
     return (
@@ -18,6 +19,7 @@ export const CartItem = ({ product, deleteItem }) => {
                     <Col>
                     <Button variant='danger' onClick={() => deleteItem(product.id)}>Borrar</Button>
                     </Col>
+                    <Link className='btn btn-dark' to='/checkout'>Terminar su compra</Link>
                 </Row>
             </Container>
         </Card>

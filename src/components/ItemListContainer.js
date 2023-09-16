@@ -9,10 +9,10 @@ import { CartContext } from "../context/CartContext"
 
 export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
-    const [data, setData] = useState([])
-    const [error, setError] = useState("")
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
+    const [data, setData] = useState([])
+    const [error, setError] = useState("")
     const { cart } = useContext(CartContext)
 
     useEffect(() => {
@@ -38,7 +38,7 @@ export const ItemListContainer = ({greeting}) => {
             },
             error: (error) => {
                 console.log(error)
-                alert("Hubo un error al cargar los productos")
+                toast("Hubo un error al cargar los productos")
             }
         })
 
@@ -51,8 +51,6 @@ export const ItemListContainer = ({greeting}) => {
             })
             .finally(()=> setLoading(false))
     },[categoryId])
-
-    console.log(cart)
     
     return (
         <div className="d-flex flex-column align-items-center">

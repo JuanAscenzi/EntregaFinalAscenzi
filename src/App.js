@@ -6,7 +6,6 @@ import { Toaster } from "sonner";
 import { CartProvider } from "./context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
-import "./db/migrations";
 
 function App() {
     return (
