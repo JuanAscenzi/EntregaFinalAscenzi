@@ -10,13 +10,13 @@ export const CartItem = ({ product, deleteItem }) => {
                       {product.name}
                     </Col>
                     <Col>
-                      Cantidad: {product.quant}
+                      Cantidad: {product.quantity}
                     </Col>
                     <Col>
-                      $: {product.price}
+                      $: {product.price} 
                     </Col>
                     <Col>
-                    <Button variant='danger' onClick={() => deleteItem(product.item.id)}>Borrar</Button>
+                    <Button variant='danger' onClick={() => deleteItem(product.id)}>Borrar</Button>
                     </Col>
                 </Row>
             </Container>

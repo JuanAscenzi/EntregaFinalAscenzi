@@ -11,11 +11,12 @@ export function CarritoContainer() {
     <div>
       {cart.length === 0 && 
         <div>
-          <p>Carrito vacio!</p>
-          <Link to='/'>Volver a Home</Link>
+          <br /><br /><br />
+          <h4 className='d-flex flex-column align-items-center'>El carrito esta vacio</h4>
+          <Link className='d-flex flex-column align-items-center' to='/'>Volver a Home</Link>
         </div>
       }
-      {(cart.length > 0) && cart.map(item => <CartItem key={item.id} product={item} deleteItem={deleteItem} /> )}
+      {(cart.length > 0) && cart.map(item => <CartItem key={item.id} product={item} deleteItem={deleteItem}/>)}
     </div>
     
   )
