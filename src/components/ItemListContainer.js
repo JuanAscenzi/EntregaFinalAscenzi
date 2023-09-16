@@ -20,6 +20,7 @@ export const ItemListContainer = ({greeting}) => {
         const productosCollection = collection(db, "productos")
         const filtroConsulta = query(productosCollection, where("category","==","rubia"))
         const laConsulta = getDocs(filtroConsulta)
+        
         const asyncFunc = categoryId ? getProductsByCategory : getProducts
 
         toast.promise(laConsulta, {

@@ -17,6 +17,7 @@ export function CarritoContainer() {
         </div>
       }
       {(cart.length > 0) && cart.map(item => <CartItem key={item.id} product={item} deleteItem={deleteItem}/>)}
+      <Link className='btn btn-dark' to='/checkout'>Terminar su compra</Link>
     </div>
     
   )
